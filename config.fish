@@ -35,7 +35,9 @@ function rc
 end
 
 function fish_greeting
-  printf "\n\n   "(fortune)"\n\n"
+  printf "\n\n"
+  fortune
+  printf "\n\n"
 end
 
 # Install tide
