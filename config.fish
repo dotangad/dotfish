@@ -26,7 +26,7 @@ end
 
 # GPG ioctl error
 # https://stackoverflow.com/questions/57591432/gpg-signing-failed-inappropriate-ioctl-for-device-on-macos-with-maven
-set GPG_TTY (tty)
+set -x GPG_TTY (tty)
 
 source ~/dotfiles/aliases.sh
 
@@ -35,7 +35,9 @@ function rc
 end
 
 function fish_greeting
-  printf "\n\n   "(fortune)"\n\n"
+  printf "\n\n"
+  fortune
+  printf "\n\n"
 end
 
 # Install tide
