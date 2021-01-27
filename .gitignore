@@ -1,3 +1,4 @@
 .DS_Store
 functions/__*
 fish_variables
+conf.d/z.fish
