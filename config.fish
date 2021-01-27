@@ -1,8 +1,18 @@
 set LANG en_US.UTF-8
 set TERM xterm-256color
 
-set GOPATH $HOME/src/go
-set GOBIN $HOME/src/go/bin
+set -x GOPATH $HOME/src/go
+set -x GOBIN $HOME/src/go/bin
+
+set -x DOTANGAD_OS ""
+switch (uname)
+  case Linux
+    set -x DOTANGAD_OS "LINUX"
+  case Darwin
+    set -x DOTANGAD_OS "MACOS"
+  case '*'
+    set -x DOTANGAD_OS "UNKNOWN"
+end
 
 set EDITOR "nvim"
 
