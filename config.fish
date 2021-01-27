@@ -26,7 +26,7 @@ end
 
 # GPG ioctl error
 # https://stackoverflow.com/questions/57591432/gpg-signing-failed-inappropriate-ioctl-for-device-on-macos-with-maven
-set GPG_TTY (tty)
+set -x GPG_TTY (tty)
 
 source ~/dotfiles/aliases.sh
 
