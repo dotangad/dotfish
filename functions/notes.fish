@@ -30,10 +30,10 @@ function notes
     set raw ""
     if test (count $argv) -gt 1
       set query (__notes_concatenate $argv[2..(count $argv)] | xargs)
-      set raw (fzf --print-query -1 -q $query)
+      set raw (fzf --tac --print-query -1 -q $query)
       set -e query
     else
-      set raw (fzf --print-query)
+      set raw (fzf --tac --print-query)
     end
 
     if test (count $raw) -gt 1
