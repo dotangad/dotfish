@@ -8,6 +8,7 @@ set -x DOTANGAD_OS ""
 switch (uname)
   case Linux
     set -x DOTANGAD_OS "LINUX"
+    source $HOME/.config/fish/linux.fish
   case Darwin
     set -x DOTANGAD_OS "MACOS"
   case '*'
