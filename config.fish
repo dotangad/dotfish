@@ -11,24 +11,17 @@ switch (uname)
     source $HOME/.config/fish/linux.fish
   case Darwin
     set -x DOTANGAD_OS "MACOS"
+    source $HOME/.config/fish/macos.fish
   case '*'
     set -x DOTANGAD_OS "UNKNOWN"
 end
 
 set EDITOR "nvim"
 
-set PATH $HOME/flutter/bin $PATH
 set PATH /usr/local/bin $PATH
 set PATH $GOBIN $PATH
 set PATH /usr/local/sbin $PATH
-set PATH $HOME/.ghcup/bin $PATH
-set PATH $HOME/.local/bin $PATH
 set PATH $HOME/dotfiles/scripts $PATH
-set PATH $HOME/bin $PATH
-set PATH $HOME/bin/node $PATH
-set PATH $HOME/.yarn/bin $PATH
-set PATH $HOME/.config/yarn/global/node_modules/.bin $PATH
-set PATH $HOME/src/flutter/bin $PATH
 
 function fish_user_key_bindings
   fish_vi_key_bindings

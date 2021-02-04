@@ -7,3 +7,7 @@ end
 function pacmd_list_bluetooth_profiles
   pacmd list-cards | grep "index: "(pacmd_bluetooth_index) -A25 | grep "active profile" -B10
 end
+
+set PATH $HOME/snap/flutter/common/flutter/bin $PATH
+set PATH $HOME/.pub-cache/bin $PATH
+set PATH /usr/lib/dart/bin $PATH
