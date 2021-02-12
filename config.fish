@@ -34,6 +34,9 @@ set -x GPG_TTY (tty)
 
 source ~/dotfiles/aliases.sh
 
+# Rust and cargo
+bass source $HOME/.cargo/env
+
 function rc
   source ~/.config/fish/config.fish
 end
