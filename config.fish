@@ -47,5 +47,8 @@ function fish_greeting
   printf "\n\n"
 end
 
+# Theme
+source set_colors.fish
+
 # Install tide
 # curl -sL git.io/tide | source && tide_install
