@@ -9,6 +9,8 @@ switch (uname)
   case Linux
     set -x DOTANGAD_OS "LINUX"
     source $HOME/.config/fish/linux.fish
+    # https://github.com/baskerville/bspwm/issues/763
+    export DISPLAY=:0
   case Darwin
     set -x DOTANGAD_OS "MACOS"
     source $HOME/.config/fish/macos.fish
