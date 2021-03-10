@@ -9,6 +9,7 @@ switch (uname)
   case Linux
     set -x DOTANGAD_OS "LINUX"
     source $HOME/.config/fish/linux.fish
+    set PATH $HOME/.config/composer/vendor/bin $PATH
     # https://github.com/baskerville/bspwm/issues/763
     export DISPLAY=:0
   case Darwin
@@ -37,7 +38,14 @@ set -x GPG_TTY (tty)
 source ~/dotfiles/aliases.sh
 
 # Rust and cargo
-bass source $HOME/.cargo/env
+if [ -f "$HOME/.cargo/env" ]
+  bass source $HOME/.cargo/env
+end
+
+# RVM
+if [ -f "$HOME/.rvm/scripts/rvm" ]
+  bass source $HOME/.rvm/scripts/rvm
+end
 
 function rc
   source ~/.config/fish/config.fish
