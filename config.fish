@@ -58,7 +58,7 @@ function fish_greeting
 end
 
 # Theme
-source ~/.config/fish/set_colors.fish
+# source ~/.config/fish/set_colors.fish
 
 # FZF respect .gitignore
 set -x FZF_DEFAULT_COMMAND 'ag --hidden --ignore .git -g ""'
