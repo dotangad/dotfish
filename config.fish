@@ -10,6 +10,7 @@ switch (uname)
     set -x DOTANGAD_OS "LINUX"
     source $HOME/.config/fish/linux.fish
     set PATH $HOME/.config/composer/vendor/bin $PATH
+    set PATH /usr/local/go/bin $PATH
     # https://github.com/baskerville/bspwm/issues/763
     export DISPLAY=:0
   case Darwin
@@ -56,6 +57,8 @@ function fish_greeting
   fortune
   printf "\n\n"
 end
+
+alias sail='bash vendor/bin/sail'
 
 # Theme
 # source ~/.config/fish/set_colors.fish
