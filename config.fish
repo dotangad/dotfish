@@ -20,7 +20,7 @@ switch (uname)
     set -x DOTANGAD_OS "UNKNOWN"
 end
 
-set EDITOR "nvim"
+set EDITOR -x "nvim"
 
 set PATH /usr/local/bin $PATH
 set PATH $GOBIN $PATH
