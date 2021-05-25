@@ -16,10 +16,14 @@ function fish_prompt --description 'Write out the prompt'
         echo '?'
     end
 
-    echo -n -s (set_color --bold a1cae2) "λ" (set_color normal) " :: " \
-        (set_color --bold a1cae2) (prompt_pwd) (set_color normal) \
+    # orange: e5c07b
+    # purple: d55fde
+    # blue:   52adf2
+    echo -n -s (set_color --bold e5c07b) "λ" (set_color normal) \
+        (set_color bbbbbb) " :: " \
+        (set_color d55fde) (prompt_pwd) (set_color bbbbbb) \
         (fish_vcs_prompt) \
         (__fish_print_pipestatus " [" "]" "|" (set_color $fish_color_status) \
-        (set_color --bold $fish_color_status) $last_pipestatus) " "\
-        (set_color --bold 3b5360) "$suffix " (set_color normal)
+        (set_color $fish_color_status) $last_pipestatus) " "\
+        (set_color --bold 52adf2) "$suffix " (set_color normal)
 end

@@ -22,10 +22,11 @@ end
 
 set EDITOR -x "nvim"
 
-set PATH /usr/local/bin $PATH
-set PATH $GOBIN $PATH
-set PATH /usr/local/sbin $PATH
-set PATH $HOME/dotfiles/scripts $PATH
+fish_add_path /usr/local/bin
+fish_add_path $GOBIN
+fish_add_path /usr/local/sbin
+fish_add_path $HOME/dotfiles/scripts
+fish_add_path $HOME/bin
 
 function fish_user_key_bindings
   fish_vi_key_bindings
@@ -41,11 +42,6 @@ source ~/dotfiles/aliases.sh
 # Rust and cargo
 if [ -f "$HOME/.cargo/env" ]
   bass source $HOME/.cargo/env
-end
-
-# RVM
-if [ -f "$HOME/.rvm/scripts/rvm" ]
-  bass source $HOME/.rvm/scripts/rvm
 end
 
 function rc
