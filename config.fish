@@ -27,6 +27,8 @@ fish_add_path $GOBIN
 fish_add_path /usr/local/sbin
 fish_add_path $HOME/dotfiles/scripts
 fish_add_path $HOME/bin
+fish_add_path /usr/lib/ruby/gems/3.0.0
+fish_add_path $HOME/.local/share/gem/ruby/3.0.0
 
 function fish_user_key_bindings
   fish_vi_key_bindings
@@ -59,6 +61,7 @@ alias sail='bash vendor/bin/sail'
 function nvm
     bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
 end
+nvm use node
 
 # Theme
 # source ~/.config/fish/set_colors.fish
