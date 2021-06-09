@@ -58,10 +58,10 @@ end
 
 alias sail='bash vendor/bin/sail'
 
-function nvm
-    bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
-end
-nvm use node
+# function nvm
+#     bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
+# end
+# nvm use node
 
 # Theme
 # source ~/.config/fish/set_colors.fish
