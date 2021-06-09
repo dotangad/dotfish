@@ -26,8 +26,8 @@ function fish_prompt --description 'Write out the prompt'
     set -g __fish_git_prompt_color_invalidstate red
     set -g __fish_git_prompt_color_cleanstate brgreen
 
-    set -g __fish_git_prompt_char_upstream_ahead ">"
-    set -g __fish_git_prompt_char_upstream_behind "<"
+    set -g __fish_git_prompt_char_upstream_ahead "^"
+    set -g __fish_git_prompt_char_upstream_behind "v"
     set -g __fish_git_prompt_char_upstream_diverged "<>"
     set -g __fish_git_prompt_char_upstream_equal "="
     set -g __fish_git_prompt_char_untrackedfiles "..."
