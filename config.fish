@@ -20,7 +20,7 @@ switch (uname)
     set -x DOTANGAD_OS "UNKNOWN"
 end
 
-set EDITOR -x "nvim"
+set -x EDITOR "nvim"
 
 fish_add_path /usr/local/bin
 fish_add_path $GOBIN
@@ -29,6 +29,7 @@ fish_add_path $HOME/dotfiles/scripts
 fish_add_path $HOME/bin
 fish_add_path /usr/lib/ruby/gems/3.0.0
 fish_add_path $HOME/.local/share/gem/ruby/3.0.0
+fish_add_path (dirname (nvm which 16.4.0))
 
 function fish_user_key_bindings
   fish_vi_key_bindings
