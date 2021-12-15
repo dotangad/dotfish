@@ -31,11 +31,6 @@ fish_add_path /usr/lib/ruby/gems/3.0.0
 fish_add_path $HOME/.local/share/gem/ruby/3.0.0
 fish_add_path (dirname (nvm which 16.4.0))
 
-function fish_user_key_bindings
-  fish_vi_key_bindings
-  bind -M insert jk "if commandline -P; commandline -f cancel; else; set fish_bind_mode default; commandline -f backward-char force-repaint; end"
-end
-
 # GPG ioctl error
 # https://stackoverflow.com/questions/57591432/gpg-signing-failed-inappropriate-ioctl-for-device-on-macos-with-maven
 set -x GPG_TTY (tty)
@@ -72,3 +67,5 @@ set -x FZF_DEFAULT_COMMAND 'ag --hidden --ignore .git -g ""'
 
 # Install tide
 # curl -sL git.io/tide | source && tide_install
+
+kitty + complete setup fish | source
